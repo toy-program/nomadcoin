@@ -1,16 +1,7 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/toy-program/nomadcoin/blockchain"
-)
+import "github.com/toy-program/nomadcoin/explorer"
 
 func main() {
-	chain := blockchain.GetBlockchain()
-	chain.AddBlock("Second Block")
-
-	for _, block := range chain.AllBlocks() {
-		fmt.Println(block.GetDetail())
-	}
+	explorer.Start()
 }
